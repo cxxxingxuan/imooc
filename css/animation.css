@@ -1,0 +1,207 @@
+/*第一屏及顶部动画*/
+.header,
+.screen_1__p{
+	transition: all .6s .6s;
+}
+.screen_1__h2{
+    transition: all .6s;
+}
+.header_animate_init{
+	opacity: 0;
+	transform: translate(0,-100%);
+}
+.header_animate_done{
+	opacity: 1;
+	transform: translate(0,0);
+}
+.screen_1__h2_animate_init{
+    opacity: 0;
+    transform: translate(0,10%);
+}
+.screen_1__p_animate_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen_1__h2_animate_done,
+.screen_1__p_animate_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+/*第二屏动画*/
+.screen_2__h2{
+	transition: all .6s;
+}
+.screen_2__p,
+.screen_2__image1{
+    transition: all .6s .6s;
+}
+.screen_2__image2_animate_done{
+    animation: Jump .6s .6s forwards;
+}
+@-webkit-keyframes Jump {
+    0%{
+    	transform: translate(0,100%);
+    	opacity: 0;
+    }
+    50%{
+    	transform: translate(0,-5%);
+    	opacity: 1;
+    }
+    75%{
+    	transform: translate(0,5%);
+    	opacity: 1;
+    }
+    100%{
+    	transform: translate(0,0);
+    	opacity: 1;
+    }
+}
+@keyframes Jump {
+    0%{
+    	transform: translate(0,100%);
+    	opacity: 0;
+    }
+    50%{
+    	transform: translate(0,-5%);
+    	opacity: 1;
+    }
+    75%{
+    	transform: translate(0,5%);
+    	opacity: 1;
+    }
+    100%{
+    	transform: translate(0,0);
+    	opacity: 1;
+    }
+}
+.screen_2__h2_animate_done,
+.screen_2__p_animate_done,
+.screen_2__image1_animate_done{
+	transform: translate(0,0);
+	opacity: 1;
+}
+/*第三屏动画*/
+.screen_3__h2{
+	transition: all .6s;
+}
+.screen_3__p{
+	transition: all .6s .6s;
+}
+.screen_3__image{
+    transition: all;
+}
+.screen_3__style{
+    transition: all .3s 1.2s;
+}
+.screen_3__h2_animate_done,
+.screen_3__p_animate_done,
+.screen_3__style_animate_done{
+   opacity: 1;
+   transform: translate(0,0);
+}
+.screen_3__image_animate_done{
+   transform: scale(1,1);
+}
+/*SC3的五个标志呼吸效果，用阴影boxshadox呈现效果好一些，用边框Border呈现出来的效果感觉很不好*/
+.screen_3__style-item::after{
+   animation: bounce 1.25s infinite;
+}
+@keyframes bounce {
+	0%{
+		box-shadow: 0 0 0 4px ;
+	}
+	50%{
+		box-shadow: 0 0 0 6px ;
+	}
+	100%{
+		box-shadow: 0 0 0 4px ;
+	}
+}
+@-webkit-keyframes bounce {
+	0%{
+		box-shadow: 0 0 0 4px ;
+	}
+	50%{
+		box-shadow: 0 0 0 6px ;
+	}
+	100%{
+		box-shadow: 0 0 0 4px ;
+	}
+}
+/*第四屏动画*/
+.screen_4__h2{
+   transition: all .6s;
+}
+.screen_4__p,
+.screen_4__wrap-item1,
+.screen_4__wrap-item2,
+.screen_4__wrap-item3,
+.screen_4__wrap-item4{
+	transition: all .6s .6s;
+}
+.screen_4__h2_animate_done,
+.screen_4__p_animate_done{
+	opacity: 1;
+	transform: translate(0,0);
+}
+.screen_4__wrap-item1_animate_done,
+.screen_4__wrap-item2_animate_done,
+.screen_4__wrap-item3_animate_done,
+.screen_4__wrap-item4_animate_done{
+    transform: scale(1,1);
+}
+/*第五屏动画*/
+.screen_5__h2{
+	transition: all .6s;
+}
+.screen_5__p{
+	transition: all .6s .6s;
+}
+.screen_5__img{
+	transition: all ;
+}
+.screen_5__h2_animate_done,
+.screen_5__p_animate_done{
+	transform: translate(0,0);
+    opacity: 1;
+}
+.screen_5__img_animate_done{
+	transform: scale(1,1);
+}
+/*顶部变化以及下划线unline的动画*/
+.unline{
+	transition:all .6s .6s;
+}
+.screen_2__unline_animate_done,
+.screen_3__unline_animate_done,
+.screen_4__unline_animate_done,
+.screen_5__unline_animate_done{
+	opacity: 1;
+}
+.header_status{
+	background-color: rgba(255,255,255,.5);
+	z-index: 2;
+	width: 100%;
+	position: fixed;
+	transition: all .6s;
+}
+.header_status .header__logo,
+.header_status .header__nav-item{
+	color: #07111b;
+}
+.header_status .last-item{
+	color: #ffffff;
+}
+.header_status .header__nav-item_status,
+.dagang_item_status{
+	font-weight: bold;
+}
+.header .header__nav-item_style{
+	font-weight: bold;
+}
+.dagang{
+	transition: all .6s;
+}
+.dagang_item_done{
+	opacity: 1;
+}
